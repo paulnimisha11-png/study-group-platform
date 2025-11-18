@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 
 /* Custom galaxy theme styles */
 @layer base {
@@ -55,6 +54,11 @@
   .glass-card {
     @apply bg-space-medium/30 backdrop-blur-md border border-space-light/20 
            rounded-xl shadow-xl;
+  }
+  
+  /* Card hover glow effect */
+  .hover\:card-glow:hover {
+    @apply shadow-glow transform scale-105;
   }
   
   /* Floating animation container */
@@ -182,5 +186,3 @@
 .light ::selection {
   @apply bg-nebula-purple/20 text-gray-900;
 }
-=======
->>>>>>> b5351fd600bfec00c87b9341f96383d5cc4e3a64
