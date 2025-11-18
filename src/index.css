@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom galaxy theme styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-space-dark text-white transition-colors duration-300;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(253, 230, 138, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(251, 191, 36, 0.3), transparent),
+      radial-gradient(1px 1px at 50px 50px, rgba(255, 255, 255, 0.2), transparent),
+      radial-gradient(1px 1px at 80px 10px, rgba(255, 255, 255, 0.2), transparent),
+      radial-gradient(2px 2px at 130px 80px, rgba(253, 230, 138, 0.3), transparent);
+    background-size: 200px 200px;
+    background-attachment: fixed;
+  }
+  
+  /* Light mode styles */
+  .light body {
+    @apply bg-gray-50 text-gray-900;
+    background-image: none;
+  }
+}
+
+@layer components {
+  /* Galaxy button styles */
+  .btn-galaxy {
+    @apply relative px-6 py-3 bg-gradient-to-r from-nebula-purple to-nebula-pink 
+           text-white font-semibold rounded-lg shadow-glow 
+           hover:shadow-glow-pink transform hover:scale-105 
+           transition-all duration-300 overflow-hidden;
+  }
+  
+  .btn-galaxy::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-nebula-pink to-nebula-purple opacity-0 
+           transition-opacity duration-300;
+  }
+  
+  .btn-galaxy:hover::before {
+    @apply opacity-100;
+  }
+  
+  .btn-galaxy span {
+    @apply relative z-10;
+  }
+  
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-space-medium/30 backdrop-blur-md border border-space-light/20 
+           rounded-xl shadow-xl;
+  }
+  
+  /* Floating animation container */
+  .float-container {
+    @apply animate-float;
+  }
+  
+  /* Glow text effect */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+  
+  /* Star field background */
+  .starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(253, 230, 138, 0.8), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(251, 191, 36, 0.8), transparent),
+      radial-gradient(1px 1px at 50px 50px, rgba(255, 255, 255, 0.6), transparent),
+      radial-gradient(1px 1px at 80px 10px, rgba(255, 255, 255, 0.6), transparent),
+      radial-gradient(2px 2px at 130px 80px, rgba(253, 230, 138, 0.8), transparent),
+      radial-gradient(1px 1px at 110px 120px, rgba(255, 255, 255, 0.6), transparent);
+    background-size: 200px 200px;
+    animation: twinkle 10s ease-in-out infinite;
+  }
+  
+  /* Form input styles */
+  .galaxy-input {
+    @apply bg-space-medium/50 border border-space-light/30 rounded-lg px-4 py-2 
+           text-white placeholder-space-light/70 
+           focus:border-nebula-purple focus:outline-none focus:ring-2 focus:ring-nebula-purple/20
+           transition-all duration-300;
+  }
+  
+  .light .galaxy-input {
+    @apply bg-white border-gray-300 text-gray-900 placeholder-gray-500
+           focus:border-nebula-purple focus:ring-nebula-purple/20;
+  }
+  
+  /* Navigation styles */
+  .nav-link {
+    @apply relative px-4 py-2 text-space-light hover:text-white 
+           transition-colors duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-nebula-purple transform scale-x-0 
+           transition-transform duration-300;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply scale-x-100;
+  }
+  
+  /* Card hover effects */
+  .hover-card {
+    @apply transform hover:scale-105 hover:shadow-glow transition-all duration-300;
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-nebula-purple;
+  }
+  
+  /* Badge styles */
+  .badge-galaxy {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+           bg-nebula-purple/20 text-nebula-purple border border-nebula-purple/30;
+  }
+  
+  /* Progress bar */
+  .progress-galaxy {
+    @apply w-full bg-space-medium/30 rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-galaxy-fill {
+    @apply h-full bg-gradient-to-r from-nebula-purple to-nebula-pink 
+           rounded-full transition-all duration-500 ease-out;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-space-medium/30;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-nebula-purple/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-nebula-purple/70;
+}
+
+/* Light mode scrollbar */
+.light ::-webkit-scrollbar-track {
+  @apply bg-gray-200;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-nebula-purple/30 text-white;
+}
+
+.light ::selection {
+  @apply bg-nebula-purple/20 text-gray-900;
+}
