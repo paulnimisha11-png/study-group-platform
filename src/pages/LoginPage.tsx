@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { LogIn, Mail, Lock, UserPlus } from 'lucide-react';
+import { LogIn, Mail, Lock } from 'lucide-react';
 
 const LoginPage: React.FC = () => {
   return (

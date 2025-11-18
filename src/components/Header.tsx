@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, BookOpen, LogIn, UserPlus } from 'lucide-react';
+import { GraduationCap, LogIn, UserPlus } from 'lucide-react';
 import { BaseComponentProps } from '../types';
 
 interface HeaderProps extends BaseComponentProps {

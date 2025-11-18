@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Clock, CheckCircle, ChevronRight, MapPin, Calendar, Users } from 'lucide-react';
+import { Clock, CheckCircle, ChevronRight, MapPin } from 'lucide-react';
 import { StudyPreferences } from '../types';
 
 const AssessmentPage: React.FC = () => {
