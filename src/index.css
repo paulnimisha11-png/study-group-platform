@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 /* Custom galaxy theme styles */
 @layer base {
@@ -181,3 +182,5 @@
 .light ::selection {
   @apply bg-nebula-purple/20 text-gray-900;
 }
+=======
+>>>>>>> b5351fd600bfec00c87b9341f96383d5cc4e3a64

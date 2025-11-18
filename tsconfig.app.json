@@ -1,14 +1,8 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "composite": true,
-    "skipLibCheck": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
-=======
-    "target": "ES2022",
-    "lib": ["ES2023"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -18,13 +12,13 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
->>>>>>> b5351fd600bfec00c87b9341f96383d5cc4e3a64
   },
-  "include": ["vite.config.ts"]
+  "include": ["src"]
 }
